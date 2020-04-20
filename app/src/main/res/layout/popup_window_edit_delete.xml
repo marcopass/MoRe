@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rounded_layout_background_dark"
+    android:padding="@dimen/padding">
+
+    <TextView
+        android:id="@+id/popup_id_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ID..."
+        android:textSize="@dimen/textSize"
+        android:textColor="@color/colorText"
+        android:textStyle="bold|italic"
+        android:paddingRight="20dp"/>
+
+    <Button
+        android:id="@+id/edit_trans_button"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/ic_edit" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingRight="20dp"/>
+
+    <Button
+        android:id="@+id/delete_trans_button"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/ic_delete" />
+
+</LinearLayout>

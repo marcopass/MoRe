@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/menu_item_backup"
+        android:icon="@drawable/ic_backup"
+        android:title="Database Backup"
+        app:showAsAction="">
+    </item>
+
+    <item android:id="@+id/menu_item_cloud_download"
+        android:icon="@drawable/ic_cloud_download"
+        android:title="Database Download"
+        app:showAsAction="">
+    </item>
+
+    <item android:id="@+id/menu_item_renumber"
+        android:icon="@drawable/ic_renumber"
+        android:title="Renumber Database"
+        app:showAsAction="">
+    </item>
+</menu>

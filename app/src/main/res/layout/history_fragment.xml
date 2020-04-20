@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/history_fragment">
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:max="100"
+        android:backgroundTint="@android:color/white"
+        android:indeterminateTint="@color/colorAccent"
+        android:layout_marginTop="-7dp"
+        android:visibility="invisible"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/padding2">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/layout_history"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="@dimen/padding"
+            android:background="@drawable/rounded_layout_background"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/layout_history_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding"
+                app:layout_constraintTop_toTopOf="parent"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/text_history_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="X transactions in DB"
+                    android:textSize="@dimen/textSize"
+                    android:textColor="@color/colorText"
+                    android:textStyle="bold"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right">
+
+                    <Button
+                        android:id="@+id/search_trans_button"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/ic_search" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/quick_summary_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/padding"
+                android:paddingRight="@dimen/padding"
+                android:paddingBottom="@dimen/padding"
+                app:layout_constraintTop_toBottomOf="@id/layout_history_title"
+                app:layout_constraintBottom_toTopOf="@id/history_scroll_view"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/found_trans_number_text_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorText"
+                    android:textSize="@dimen/textSizeSmall"
+                    android:text="Found XX transactions" />
+                <TextView
+                    android:id="@+id/quick_sum_text_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorText"
+                    android:textSize="@dimen/textSizeSmall"
+                    android:text="Sum: XX" />
+                <TextView
+                    android:id="@+id/quick_trans_avg_text_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorText"
+                    android:textSize="@dimen/textSizeSmall"
+                    android:text="Average: XX" />
+            </LinearLayout>
+
+            <ScrollView
+                android:id="@+id/history_scroll_view"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:padding="@dimen/padding"
+                app:layout_constraintTop_toBottomOf="@id/quick_summary_layout"
+                app:layout_constraintBottom_toBottomOf="parent">
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TableLayout
+                        android:id="@+id/table_layout_history"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+                    </TableLayout>
+
+                </HorizontalScrollView>
+            </ScrollView>
+
+        </android.support.constraint.ConstraintLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

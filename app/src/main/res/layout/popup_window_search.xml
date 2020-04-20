@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rounded_layout_background_dark"
+    android:padding="@dimen/padding"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="0dp"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:gravity="left|center_vertical"
+                    android:text="Amount"
+                    android:textColor="@color/colorText"
+                    android:textSize="@dimen/textSize"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/search_amount_edit_text"
+                    android:layout_width="@dimen/editTextWidth"
+                    android:layout_height="wrap_content"
+                    android:gravity="left|center_vertical"
+                    android:inputType="text"
+                    android:textColor="@color/colorText"
+                    android:textSize="@dimen/textSize" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="0dp"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:gravity="left|center_vertical"
+                    android:text="Date"
+                    android:textColor="@color/colorText"
+                    android:textSize="@dimen/textSize"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/search_date_edit_text"
+                    android:layout_width="@dimen/editTextWidth"
+                    android:layout_height="wrap_content"
+                    android:gravity="left|center_vertical"
+                    android:inputType="text"
+                    android:textColor="@color/colorText"
+                    android:textSize="@dimen/textSize" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="0dp"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:gravity="left|center_vertical"
+                    android:text="Method"
+                    android:textColor="@color/colorText"
+                    android:textSize="@dimen/textSize"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="@dimen/editTextWidth"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/search_cash_radio_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Cash"
+                        android:textColor="@color/colorText"
+                        android:textSize="@dimen/textSize" />
+
+                    <RadioButton
+                        android:id="@+id/search_card_radio_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Card"
+                        android:textColor="@color/colorText"
+                        android:textSize="@dimen/textSize" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="0dp"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:gravity="left|center_vertical"
+                    android:text="Category"
+                    android:textColor="@color/colorText"
+                    android:textSize="@dimen/textSize"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/search_category_edit_text"
+                    android:layout_width="@dimen/editTextWidth"
+                    android:layout_height="wrap_content"
+                    android:gravity="left|center_vertical"
+                    android:inputType="textCapSentences"
+                    android:textColor="@color/colorText"
+                    android:textSize="@dimen/textSize" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="0dp"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:gravity="left|center_vertical"
+                    android:text="Comments"
+                    android:textColor="@color/colorText"
+                    android:textSize="@dimen/textSize"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/search_comments_edit_text"
+                    android:layout_width="@dimen/editTextWidth"
+                    android:layout_height="wrap_content"
+                    android:gravity="left|center_vertical"
+                    android:inputType="textCapSentences"
+                    android:textColor="@color/colorText"
+                    android:textSize="@dimen/textSize" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_submit_search_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:paddingRight="40dp"
+                android:paddingLeft="40dp"
+                android:paddingTop="@dimen/padding"
+                android:paddingBottom="@dimen/padding">
+
+                <Button
+                    android:id="@+id/submit_search_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/round_button"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:text="SEARCH"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/buttonTextSize"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <corners android:bottomRightRadius="@dimen/buttonCornerRadius"
+        android:bottomLeftRadius="@dimen/buttonCornerRadius"
+        android:topRightRadius="@dimen/buttonCornerRadius"
+        android:topLeftRadius="@dimen/buttonCornerRadius"/>
+</shape>
